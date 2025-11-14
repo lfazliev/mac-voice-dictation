@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Настройки</title>
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <div class="settings-container">
+      <h1>Настройки</h1>
+
+      <form id="settingsForm">
+        <div class="form-group">
+          <label for="aiProvider">AI Провайдер</label>
+          <select id="aiProvider">
+            <option value="openai">OpenAI (GPT-4o Transcribe)</option>
+            <option value="google">Google (Gemini 2.5 Flash)</option>
+          </select>
+          <small>Выберите сервис для распознавания речи</small>
+        </div>
+
+        <div class="form-group" id="openaiKeyGroup">
+          <label for="apiKey">OpenAI API ключ</label>
+          <input type="password" id="apiKey" placeholder="sk-..." />
+          <small
+            >Получить API ключ можно на
+            <a href="https://platform.openai.com/api-keys" target="_blank"
+              >platform.openai.com</a
+            ></small
+          >
+        </div>
+
+        <div class="form-group" id="googleKeyGroup" style="display: none">
+          <label for="googleApiKey">Google API ключ</label>
+          <input type="password" id="googleApiKey" placeholder="AI..." />
+          <small
+            >Получить API ключ можно на
+            <a href="https://aistudio.google.com/app/apikey" target="_blank"
+              >Google AI Studio</a
+            ></small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="language">Язык распознавания</label>
+          <select id="language">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pasteMethod">Метод вставки текста</label>
+          <select id="pasteMethod">
+            <option value="clipboard" selected>
+              Через буфер обмена (Cmd+V) - рекомендуется
+            </option>
+            <option value="direct">
+              Прямой ввод (только английский текст)
+            </option>
+          </select>
+          <small
+            >Метод через буфер обмена работает с любыми языками и не зависит от
+            раскладки клавиатуры.</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label>Горячая клавиша</label>
+          <div class="hotkey-display">⌘ + Shift + D</div>
+          <small>Используйте эту комбинацию для вызова диктовки</small>
+        </div>
+
+        <div class="info-box">
+          <strong>⚠️ Важно!</strong>
+          <p>
+            Для автоматической вставки текста необходимо разрешение
+            <strong>Специальные возможности</strong> в Системных настройках
+            macOS.
+          </p>
+          <p>
+            <strong>Системные настройки</strong> →
+            <strong>Конфиденциальность</strong> →
+            <strong>Специальные возможности</strong> → добавьте
+            <strong>Electron</strong>
+          </p>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="cancelBtn" class="btn btn-secondary">
+            Отмена
+          </button>
+          <button type="submit" class="btn btn-primary">Сохранить</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="settings.js"></script>
+  </body>
+</html>

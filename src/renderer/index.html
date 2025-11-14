@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Диктовка</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <button id="closeBtn" class="icon-btn" title="Скрыть">✕</button>
+          <h2>Диктовка</h2>
+        </div>
+        <button id="settingsBtn" class="icon-btn" title="Настройки">⚙️</button>
+      </div>
+
+      <div class="content">
+        <div id="status" class="status">Нажмите на микрофон для начала</div>
+
+        <button id="recordBtn" class="record-btn">
+          <div class="mic-icon">🎤</div>
+        </button>
+
+        <div id="timer" class="timer">0:00</div>
+
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="footer">
+        <button id="cancelBtn" class="btn btn-secondary">Отмена</button>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

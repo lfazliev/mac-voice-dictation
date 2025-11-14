@@ -1,0 +1,40 @@
+{
+  "name": "voice-dictation",
+  "version": "1.0.1",
+  "description": "Electron приложение для диктовки с OpenAI API",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "dist": "electron-builder --mac"
+  },
+  "keywords": [
+    "electron",
+    "dictation",
+    "openai",
+    "gpt-4o-transcribe"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "electron-store": "^8.1.0",
+    "openai": "^4.20.0"
+  },
+  "build": {
+    "appId": "com.example.voicedictation",
+    "productName": "Voice Dictation",
+    "mac": {
+      "icon": "build/DictionApp.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.productivity"
+    }
+  }
+}
