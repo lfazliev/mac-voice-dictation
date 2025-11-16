@@ -2,6 +2,15 @@
 
 Ежедневный инструмент для диктовки: по горячей клавише открывается компактное окно записи, ваше голосовое сообщение распознаётся с помощью выбранного AI‑сервиса (OpenAI или Google), а итоговый текст автоматически вставляется в активное приложение и фокус возвращается туда же. Удобно для заметок, писем, тикетов, TODO и любой повседневной рутины.
 
+### Dictation app for macOS (voice to text, speech to text)
+
+Fast dictation app for macOS built with Electron. Transcribe speech to text using OpenAI or Google and auto‑insert the result into any app. Keywords: dictation app macOS, voice to text macOS, speech to text for Mac.
+
+### Скачать для macOS
+
+- Готовый установщик `.dmg` для macOS ищите в разделе Releases репозитория.
+- Либо соберите локально (см. ниже «Сборка релиза (macOS)»).
+
 ### Возможности
 
 - **Горячая клавиша**: ⌘ + Shift + D (macOS).
@@ -113,9 +122,9 @@ build/
   DictionApp.icns         # иконка приложения
 ```
 
-### Скриншот
+### Icon
 
-![Voice Dictation](./DictionApp.png)
+![Dictation app for macOS — Voice Dictation](./DictionApp.png)
 
 ### Диагностика и советы
 
